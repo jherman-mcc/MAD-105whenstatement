@@ -1,19 +1,21 @@
 fun main(args: Array<String>) {
-    var input1
-    var OtherLang = "x"
-    input1 = readLine()!! toInt ()
-    When(Input1) {
-    1 -> OtherLang = "The number $input1 in Japanese is ichi"
-    2 -> OtherLang = "The number $input1 in Japanese is ni"
-    3 -> OtherLang = "The number $input1 in Japanese is san"
-    4 -> OtherLang = "The number $input1 in Japanese is shi"
-    5 -> OtherLang = "The number $input1 in Japanese is go"
-    6 -> OtherLang = "The number $input1 in Japanese is roku"
-    7 -> OtherLang = "The number $input1 in Japanese is shichi"
-    8 -> OtherLang = "The number $input1 in Japanese is hachi"
-    9 -> OtherLang = "The number $input1 in Japanese is kyuu"
-    10 -> OtherLang = "The number $input1 in Japanese is juu"
-    !in 1..10 OtherLang "Out of range"
-    Else -> OtherLang "Unknown"
+    var input1 = 0
+    var otherLang = "x"
+    input1 = readLine()!!.toInt()
+    when (input1){
+        1 -> otherLang = "ichi"
+        2 -> otherLang = "ni"
+        3 -> otherLang = "san"
+        4 -> otherLang = "shi"
+        5 -> otherLang = "go"
+        6 -> otherLang = "roku"
+        7 -> otherLang = "shichi"
+        8 -> otherLang = "hachi"
+        9 -> otherLang = "kyuu"
+        10 -> otherLang = "juu"
+        !in 1..10 -> otherLang = "Out of range"
+        else -> otherLang = "Unknown"
     }
+    println("The number $input1 in Japanese")
+    print("is $otherLang")
 }
